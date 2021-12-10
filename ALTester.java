@@ -3,4 +3,18 @@
 // lab02
 // 2021-12-10
 
-public class ALTester {}
+public class ALTester {
+
+  public ArrayList _arrlist;
+
+  public ALTester() {
+    _arr = new ArrayList(23);
+  }
+
+  public status void main(String[] args) {
+    ALTester test = new ALTester();
+
+  }
+
+
+}
