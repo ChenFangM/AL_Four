@@ -5,7 +5,7 @@
 
 /*
 QCC:
-- What is <Integer>? Is it similar to typecasting but for class variable types? 
+- What is <Integer> really? Is it similar to typecasting but for class variable types? 
 - Why do we need an addBinary when we already have an addLinear?
 DISCO:
 - N/A
