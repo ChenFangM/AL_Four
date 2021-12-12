@@ -3,7 +3,7 @@
 // lab02
 // 2021-12-10
 
-java.util.*;
+import java.util.*;
 
 public class ALTester{
 
