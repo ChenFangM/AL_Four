@@ -7,16 +7,16 @@ import java.util.*;
 
 public class ALTester{
 
-  public ArrayList _arrlist;
+  public ArrayList<Integer> _arrlist;
 
   public ALTester() {
-    _arrlist = new ArrayList(23);
+    _arrlist = new ArrayList<Integer>(23);
   }
 
   public int isSorted(){
     int result = 0;
     for(int i = 0; i < 23; i++){
-      result = (int)_arrlist.get(i+1) - (int)_arrlist.get(i);
+      result = _arrlist.get(i+1).compareTo(_arrlist.get(i));
       if (result < 0){
         return result;
       }
@@ -25,8 +25,9 @@ public class ALTester{
   }
   
   public void populate(){
-    for(int i = 0; i < 23; i++){
-      _arrlist.add(Math.random()*10);
+    for(int i = 0; i < 23; i++) {
+      Integer num = new Integer((int) (Math.random() * 10));
+      _arrlist.add(num);
     }
   }
   
