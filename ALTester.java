@@ -3,6 +3,8 @@
 // lab02
 // 2021-12-10
 
+java.util.*;
+
 public class ALTester{
 
   public ArrayList _arrlist;
