@@ -10,7 +10,7 @@ public class ALTester{
   public ArrayList _arrlist;
 
   public ALTester() {
-    _arr = new ArrayList(23);
+    _arrlist = new ArrayList(23);
   }
 
   public int isSorted(){
