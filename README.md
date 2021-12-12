@@ -14,7 +14,9 @@
 
 #### Remove
 * Removes the integer at the given index. Each element to the right of the item removed (one more than) is shifted one left. Takes postiton you want the item to be removed as paramter. Returns the value that was removed from the array.
+
 #### Size
 * Returns the size of OrderedArrayList.
+
 #### Get
 * Takes the index as the parameter and returns the value stored at that index.
