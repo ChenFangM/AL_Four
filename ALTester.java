@@ -28,7 +28,7 @@ public class ALTester implements OrderedArrayList{
     }
   }
   
-  public status void main(String[] args) {
+  public static void main(String[] args) {
     ALTester test = new ALTester();
     test.populate();
     System.out.print(test.isSorted);
