@@ -11,6 +11,17 @@ public class ALTester implements OrderedArrayList{
     _arr = new ArrayList(23);
   }
 
+  public int isSorted(){
+    int result;
+    for(int i = 0; i < this.length; i++){
+      result = this[i+1] - this[i];
+      if (result < 0){
+        return result;
+      }
+    }
+    return result;
+  }
+  
   public status void main(String[] args) {
     ALTester test = new ALTester();
 
