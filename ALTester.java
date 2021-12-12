@@ -33,7 +33,7 @@ public class ALTester{
   public static void main(String[] args) {
     ALTester test = new ALTester();
     test.populate();
-    System.out.print(test.isSorted);
+    System.out.print(test.isSorted());
   }
 
 
