@@ -16,7 +16,7 @@ public class ALTester{
   public int isSorted(){
     int result;
     for(int i = 0; i < 23; i++){
-      result = this.get(i+1) - this.get(i);
+      result = _arrlist.get(i+1) - _arrlist.get(i);
       if (result < 0){
         return result;
       }
@@ -26,7 +26,7 @@ public class ALTester{
   
   public void populate(){
     for(int i = 0; i < 23; i++){
-      this.add(Math.random()*10);
+      _arrlist.add(Math.random()*10);
     }
   }
   
