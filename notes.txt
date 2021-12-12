@@ -1,0 +1,3 @@
+`break` exits the for loop, while `return` ends the for loop and the method.
+    This can be seen in our OrderedArrayList class, where if break is used instead of return, the values are added twice, once in its correct index and once at the end,
+    (because of the original add function outside of the for loop).

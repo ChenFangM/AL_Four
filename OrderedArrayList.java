@@ -60,9 +60,10 @@ public class OrderedArrayList
     for (int i = 0; i < _data.size(); i++) {
       if (newVal < _data.get(i)) {
         _data.add(i, newVal);
-        break;
+        return;
       }
     }
+    _data.add(newVal); // Adds the value at the end if there doesn't exist a value larger than newVal
   }
 
   // inserts newVal at the appropriate index
