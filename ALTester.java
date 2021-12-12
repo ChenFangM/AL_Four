@@ -14,7 +14,7 @@ public class ALTester{
   }
 
   public int isSorted(){
-    int result;
+    int result = 0;
     for(int i = 0; i < 23; i++){
       result = (int)_arrlist.get(i+1) - (int)_arrlist.get(i);
       if (result < 0){
