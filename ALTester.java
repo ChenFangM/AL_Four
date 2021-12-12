@@ -3,7 +3,7 @@
 // lab02
 // 2021-12-10
 
-public class ALTester {
+public class ALTester implements ORderedArrayList{
 
   public ArrayList _arrlist;
 
