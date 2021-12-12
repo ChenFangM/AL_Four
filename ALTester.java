@@ -1,8 +1,8 @@
-// Four {Fang, Kaitlin, Jing}
-// apcs pd06
+// TNPG: Four {Fang, Kaitlin, Jing}
+// APCS pd06
 // lab02
 // 2021-12-10
-// time spent: 2
+// time spent: 2 hrs
 
 /*
 QCC:
