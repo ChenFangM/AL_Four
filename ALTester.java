@@ -2,6 +2,16 @@
 // apcs pd06
 // lab02
 // 2021-12-10
+// time spent: 2
+
+/*
+QCC:
+- What is <Integer> really? Is it similar to typecasting but for class variable types? 
+- Why do we need an addBinary when we already have an addLinear?
+DISCO:
+- `break` exits the for loop, while `return` ends the for loop and the method
+
+*/
 
 import java.util.*;
 
