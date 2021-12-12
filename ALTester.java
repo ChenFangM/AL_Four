@@ -35,6 +35,28 @@ public class ALTester{
     test.populate();
     System.out.print(test.isSorted());
   }
+  
+  /*
+  ALTester.java:10: warning: [rawtypes] found raw type: ArrayList
+   public ArrayList _arrlist;      
+   missing type arguments for generic class ArrayList<E>
+   where E is a type-variable:
+    E extends Object declared in class ArrayList
+    
+  ALTester.java:13: warning: [rawtypes] found raw type: ArrayList
+    _arrlist = new ArrayList(23);           
+    missing type arguments for generic class ArrayList<E>
+    where E is a type-variable:
+      E extends Object declared in class ArrayList
+      
+  ALTester.java:29: warning: [unchecked] unchecked call to add(E) as a member of the raw type ArrayList
+        _arrlist.add(Math.random()*10);
+    where E is a type-variable:
+      E extends Object declared in class ArrayList
+      
+  3 warnings
+  */
+  
 
 
 }
