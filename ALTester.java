@@ -16,7 +16,7 @@ public class ALTester{
   public int isSorted(){
     int result;
     for(int i = 0; i < 23; i++){
-      result = this[i+1] - this[i];
+      result = this.get(i+1) - this.get(i);
       if (result < 0){
         return result;
       }
