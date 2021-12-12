@@ -3,6 +3,15 @@
 // lab02
 // 2021-12-10
 
+/*
+QCC:
+- What is <Integer>? Is it similar to typecasting but for class variable types? 
+- Why do we need an addBinary when we already have an addLinear?
+DISCO:
+- N/A
+
+*/
+
 import java.util.*;
 
 public class ALTester{
