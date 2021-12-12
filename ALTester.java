@@ -13,8 +13,8 @@ public class ALTester implements OrderedArrayList{
 
   public int isSorted(){
     int result;
-    for(int i = 0; i < this.length; i++){
-      result = this[i+1] - this[i];
+    for(int i = 0; i < _arrlist.size; i++){
+      result = this.get(i+1) - this.get(i);
       if (result < 0){
         return result;
       }
@@ -22,9 +22,16 @@ public class ALTester implements OrderedArrayList{
     return result;
   }
   
+  public void populate(){
+    for(int i = 0; i < _arrlist.size; i++){
+      this.add(Math.random()*10);
+    }
+  }
+  
   public status void main(String[] args) {
     ALTester test = new ALTester();
-
+    test.populate();
+    System.out.print(test.isSorted);
   }
 
 
