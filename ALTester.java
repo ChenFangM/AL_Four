@@ -15,7 +15,7 @@ public class ALTester{
 
   public int isSorted(){
     int result = 0;
-    for(int i = 0; i < 23; i++){
+    for(int i = 0; i < _data.size(); i++){
       result = _data.get(i+1).compareTo(_data.get(i));
       if (result < 0){
         return result;

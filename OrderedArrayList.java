@@ -7,7 +7,6 @@
  * class OrderedArrayList
  * wrapper class for ArrayList
  * maintains invariant that elements are ordered (ascending)
- * (SKELETON)
  **********************************************/
 
 import java.util.ArrayList;
@@ -28,22 +27,29 @@ public class OrderedArrayList
 
   public String toString()
   {
-    
+    if (_data.size() == 0) {
+      return "[]";
+    } 
+    String string = "[";
+    for (int x : _data) {
+      string += x + ",";
+    }
+    return string.substring(0, string.length()-1) + "]";
   }
 
   public Integer remove( int i )
   {
-
+    return _data.remove(i);
   }
 
   public int size()
   {
-
+    return _data.size();
   }
 
   public Integer get( int i )
   {
-
+    return _data.get(i);
   }
 
   // inserts newVal at the appropriate index
@@ -51,26 +57,32 @@ public class OrderedArrayList
   // uses a linear search to find appropriate index
   public void addLinear(Integer newVal)
   {
-
+    for (int i = 0; i < _data.size(); i++) {
+      if (newVal < _data.get(i)) {
+        _data.add(i, newVal);
+        break;
+      }
+    }
   }
 
   // inserts newVal at the appropriate index
   // maintains ascending order of elements
   // uses a binary search to find appropriate index
-  public void addBinary(Integer newVal)
-  {
+  // public void addBinary(Integer newVal)
+  // {
 
-  } 
+  // } 
 
   // main method solely for testing purposes
   public static void main( String[] args )
   {
-    /*-----v-------move-me-down-----------------v--------
+ 
     OrderedArrayList Franz = new OrderedArrayList();
     // testing linear search
     for( int i = 0; i < 15; i++ )
       Franz.addLinear( (int)( 50 * Math.random() ) );
     System.out.println( Franz );
+    /*-----v-------move-me-down-----------------v--------
     // testing binary search
     Franz = new OrderedArrayList();
     for( int i = 0; i < 15; i++ ) 
