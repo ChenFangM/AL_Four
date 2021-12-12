@@ -8,7 +8,7 @@ QCC:
 - What is <Integer> really? Is it similar to typecasting but for class variable types? 
 - Why do we need an addBinary when we already have an addLinear?
 DISCO:
-- N/A
+- `break` exits the for loop, while `return` ends the for loop and the method
 
 */
 
