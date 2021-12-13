@@ -70,34 +70,36 @@ public class OrderedArrayList
   // maintains ascending order of elements
   // uses a binary search to find appropriate index
   
-/*
   public void addBinary(Integer newVal)
   {
-    // copying _data to temp
-    ArrayList<Integer> temp = new ArrayList<Integer>(10);
-    for (int i = 0; i < _data.size(); i++) {
-      temp.add(_data.get(i));
+    int midInd = 0;
+    int midVal = 0;
+    int startInd = 0;
+    int endInd = _data.size();
+    
+
+    if (endInd == 0) {
+      endInd = 0;
     }
 
-    int atIndex = 0;
-    for (int i = temp.size() / 2; i > 0; i = temp.size() / 2) {
-      if (temp.get(i) < newVal) {
-        for (int x = 0; x <= i; x ++) {
-          temp.remove(x); 
-          atIndex;
-        }      
-      }
+    while (startInd != endInd) {
+      midInd = (startInd + endInd) / 2;
+      midVal = _data.get(midInd);
 
-      if (temp.get(i) >= newVal) {
-        for (int x = temp.size() - 1; x > i; x --) {
-          temp.remove(x);
-        } 
+      if (midVal < newVal) {
+        startInd = midInd + 1;
+      }
+      if (midVal >= newVal) {
+        endInd = midInd;
+      }
+      if (midVal == newVal) {
+        break;
       }
     }
 
-    _data.add(atIndex, newVal);
-  } 
-*/
+    _data.add(endInd, newVal);
+
+  }
 
   // main method solely for testing purposes
   public static void main( String[] args )
@@ -110,13 +112,13 @@ public class OrderedArrayList
     System.out.println( Franz );
     
     // testing binary search
-    // Franz = new OrderedArrayList();
-    // Franz.addBinary(2);
-    // Franz.addBinary(3);
-    // // Franz.addBinary(1);
-    // // for( int i = 0; i < 15; i++ ) 
-    // //   Franz.addBinary( (int)( 50 * Math.random() ) );
-    // System.out.println( Franz );
+    Franz = new OrderedArrayList();
+    Franz.addBinary(2);
+    Franz.addBinary(3);
+    Franz.addBinary(1);
+    for( int i = 0; i < 15; i++ ) 
+      Franz.addBinary( (int)( 50 * Math.random() ) );
+    System.out.println( Franz );
 
 
   }//end main()
