@@ -22,7 +22,7 @@ public class OrderedArrayList
   // initializes instance variables
   public OrderedArrayList()
   {
-    _data = new ArrayList<Integer>(10);
+    _data = new ArrayList<Integer>(23);
   }
 
   public String toString()
@@ -113,9 +113,6 @@ public class OrderedArrayList
     
     // testing binary search
     Franz = new OrderedArrayList();
-    Franz.addBinary(2);
-    Franz.addBinary(3);
-    Franz.addBinary(1);
     for( int i = 0; i < 15; i++ ) 
       Franz.addBinary( (int)( 50 * Math.random() ) );
     System.out.println( Franz );
