@@ -17,15 +17,20 @@ import java.util.*;
 
 public class ALTester{
 
-  public ArrayList<Integer> _data;
-
-  public ALTester() {
-    _data = new ArrayList<Integer>(23);
+  public static int isSorted(ArrayList<Integer> _data){
+    int result = 0;
+    for(int i = 0; i < _data.size() - 1; i++){
+      result = _data.get(i+1).compareTo(_data.get(i));
+      if (result < 0){
+        return result;
+      }
+    }
+    return result;
   }
 
-  public int isSorted(){
+  public static int isSorted(OrderedArrayList _data){
     int result = 0;
-    for(int i = 0; i < _data.size(); i++){
+    for(int i = 0; i < _data.size() - 1; i++){
       result = _data.get(i+1).compareTo(_data.get(i));
       if (result < 0){
         return result;
@@ -34,20 +39,35 @@ public class ALTester{
     return result;
   }
   
-  public void populate(){
+  public static void populate(ArrayList<Integer> notordered){
     for(int i = 0; i < 23; i++) {
-      Integer num = new Integer((int) (Math.random() * 10));
-      _data.add(num);
+      Integer num = new Integer((int) (Math.random() * 40));
+      notordered.add(num);
     }
+    System.out.println(isSorted(notordered));
+  }
+
+  public static void populate(OrderedArrayList ordered) {
+    for(int i = 0; i < 23; i++) {
+      Integer num = new Integer((int) (Math.random() * 40));
+      ordered.addBinary(num);
+    }
+    System.out.println(isSorted(ordered));
   }
   
   public static void main(String[] args) {
-    ALTester test = new ALTester();
-    test.populate();
-    System.out.print(test.isSorted());
+    ArrayList<Integer> baseline = new ArrayList<Integer>();
+    populate(baseline);
+
+    OrderedArrayList test = new OrderedArrayList();
+    populate(test);    
+
   }
   
   /*
+  Error message in terminal
+  When ArrayList was used instead of ArrayList<Integer>
+  ---
   ALTester.java:10: warning: [rawtypes] found raw type: ArrayList
    public ArrayList _arrlist;      
    missing type arguments for generic class ArrayList<E>
