@@ -22,7 +22,7 @@ public class OrderedArrayList
   // initializes instance variables
   public OrderedArrayList()
   {
-    _data = new ArrayList<Integer>(23);
+    _data = new ArrayList<Integer>(10);
   }
 
   public String toString()
@@ -57,8 +57,8 @@ public class OrderedArrayList
   // uses a linear search to find appropriate index
   public void addLinear(Integer newVal)
   {
-    for (int i = 0; i < _data.size(); i++) {
-      if (newVal < _data.get(i)) {
+    for (int i = 0; i < size(); i++) {
+      if (newVal < get(i)) {
         _data.add(i, newVal);
         return;
       }
@@ -75,7 +75,7 @@ public class OrderedArrayList
     int midInd = 0;
     int midVal = 0;
     int startInd = 0;
-    int endInd = _data.size();
+    int endInd = size();
     
 
     if (endInd == 0) {
@@ -84,7 +84,7 @@ public class OrderedArrayList
 
     while (startInd != endInd) {
       midInd = (startInd + endInd) / 2;
-      midVal = _data.get(midInd);
+      midVal = get(midInd);
 
       if (midVal < newVal) {
         startInd = midInd + 1;
